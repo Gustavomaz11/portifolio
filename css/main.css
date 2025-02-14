@@ -594,8 +594,10 @@ ul.nav > li > a.active {
 /* ==========================================================================
    Hero Section
    ========================================================================== */
+
 .hero-section {
-  background-image: url(../img/hero/1.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(../img/hero/1.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -925,16 +927,15 @@ ul.nav > li > a.active {
   color: #fff;
 }
 
-
 #logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 43vh;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43vh;
+  flex-direction: column;
 }
 
 #logo img {
-    width: 255px ;
-    height: auto;
+  width: 255px;
+  height: auto;
 }
