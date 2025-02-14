@@ -594,7 +594,9 @@ ul.nav > li > a.active {
 /* ==========================================================================
    Hero Section
    ========================================================================== */
-
+#heroEnglish {
+  display: none;
+}
 .hero-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
     url(../img/hero/1.png);
@@ -938,4 +940,22 @@ ul.nav > li > a.active {
 #logo img {
   width: 255px;
   height: auto;
+}
+
+#navmenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navmenu select {
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: #fff;
+  height: min-content;
+  margin-left: 2rem;
+}
+
+#navmenu select option {
+  color: #050505;
 }

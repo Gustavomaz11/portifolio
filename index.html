@@ -39,6 +39,7 @@
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="js/script.js" defer></script>
+    <script src="js/scriptVue.js" defer></script>
 </head>
 
 <body data-spy="scroll" data-target="#navmenu" data-offset="70">
@@ -47,222 +48,221 @@
         <div class="spinner"></div>
     </div><!-- Preloader -->
 
-    <header id="header" class="header-section">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="navbar-brand"><img src="img/gustavo (1).png" alt="Alison" width="155rem" height="auto"></a>
-                <div class="d-flex menu-wrap">
-                    <div id="navmenu" class="mainmenu">
-                        <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="#home">Inicio <span class="sr-only">(current)</span></a></li>
-                            <li><a data-scroll class="nav-link" href="#about">Sobre</a></li>
-                            <li><a data-scroll class="nav-link" href="#services">Serviços</a></li>
-                            <li><a data-scroll class="nav-link" href="#works">Portifólio</a></li>
-                            <li><a data-scroll class="nav-link" href="#contact">Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header> <!-- Header -->
-
-    <section id="home" class="section hero-section d-flex align-items-center">
-        <div class="container">
-            <div class="hero-content text-center">
-                <h5>DESENVOLVENDO SOLUÇÕES DIGITAIS, IMPULSIONANDO O FUTURO</h5>
-                <h1><span class="rotate">Inovação, Design, Performace</span></h1>
-                <p>Combinando criatividade e tecnologia, crio experiências inovadoras que fazem a diferença.</p>
-                <ul class="social-link">
-                    <li><a href="https://www.linkedin.com/in/gustavo-trindade-9183072ab/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/gugamaz?igsh=MXU4MzAwZjVkMjR6aQ==" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="down-arrow">
-            <a data-scroll href="#about" class="arrow-animated">Saiba mais <i class="ti-arrow-down"></i></a>
-        </div>
-    </section><!-- hero-section -->
-
-    <section id="about" class="about-section bg-dark">
-        <div class="container-fluid">
-            <div class="row about-wrap">
-                <div class="col-md-6">
-                    <div class="about-content pdl-80">
-                        <div class="section-heading mb-20">
-                            <h2>Sobre mim</h2>
-                        </div>
-                        <p>Desenvolvedor de software focado em criar experiências digitais excepcionais, projetando sites e sistemas personalizados para otimizar a operação das empresas.</p>
-                        <p>Meu objetivo é transformar ideias em soluções de alta performance, oferecendo serviços únicos que se destacam no mercado.</p>
-                        <a href="#" class="default-btn">Conheça meu trabalho</a>
-                    </div>
-                </div>
-                <div class="col-md-6 d-none d-md-block">
-                    <img src="img/about/5.png" alt=" image">
-                </div>
-            </div>
-        </div>
-    </section><!-- about-section -->
-
-    <section id="services" class="service-section padding">
-        <div class="container-fluid">
-            <div class="row service-area d-flex align-items-center">
-                <div class="col-lg-4 col-md-4 xs-padding">
-                    <div class="section-heading pdl-80">
-                        <h2 class="mb-20">Serviços</h2>
-                        <p class="mb-20">Transformo ideias em experiências digitais inovadoras, criando soluções que impulsionam o seu negócio.</p>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-8 xs-padding">
-                    <div class="row service-wrap">
-                        <div class="col-lg-4 col-sm-6 pd-15">
-                            <div class="service-content">
-                                <i class="icon-layers"></i>
-                                <h3>Design Intuitivo</h3>
-                                <p>Criação de interfaces amigáveis e funcionais, focadas na melhor experiência do usuário.</p>
-                            </div>
-                        </div><!-- Service-1 -->
-
-                        <div class="col-lg-4 col-sm-6 pd-15">
-                            <div class="service-content">
-                                <i class="bi bi-globe-americas"></i>
-                                <h3>SEO</h3>
-                                <p>Estratégias para otimizar seu posicionamento nos motores de busca e atrair o público certo.</p>
-                            </div>
-                        </div><!-- Service-3 -->
-                        <div class="col-lg-4 col-sm-6 pd-15">
-                            <div class="service-content">
-                                <i class="bi bi-eye-fill"></i>
-                                <h3>Monitoramento e Atualização</h3>
-                                <p>Acompanhamento contínuo para garantir que seu site permaneça sempre disponível e atualizado.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 pd-15">
-                            <div class="service-content">
-                                <i class="icon-bike"></i>
-                                <h3>Design Responsivo</h3>
-                                <p>Layouts que se ajustam perfeitamente a qualquer dispositivo, oferecendo uma navegação fluida.</p>
-                            </div>
-                        </div><!-- Service-5 -->
-                        <div class="col-lg-4 col-sm-6 pd-15">
-                            <div class="service-content">
-                                <i class="bi bi-database"></i>
-                                <h3>Gestão de Banco de Dados</h3>
-                                <p>Desenvolvimento de soluções de banco de dados seguras, escaláveis e de alto desempenho.</p>
-                            </div>
+    <div id="app">
+        <header id="header" class="header-section">
+            <div class="container">
+                <nav class="navbar">
+                    <a href="#" class="navbar-brand"><img src="img/gustavo (1).png" alt="Alison" width="155rem" height="auto"></a>
+                    <div class="d-flex menu-wrap">
+                        <div id="navmenu" class="mainmenu">
+                            <ul class="nav">
+                                <li><a data-scroll class="nav-link active" href="#home" id="inicio"><span class="sr-only">(current)</span></a></li>
+                                <li><a data-scroll class="nav-link" href="#about" id="sobre"></a></li>
+                                <li><a data-scroll class="nav-link" href="#services" id="servicos"></a></li>
+                                <li><a data-scroll class="nav-link" href="#works" id="port"></a></li>
+                                <li><a data-scroll class="nav-link" href="#contact" id="contato"></a></li>
+                            </ul>
+                            <select id="toggleLanguage">
+                                <option value="pt" selected>Pt-BR</option>
+                                <option value="eng">English</option>
+                            </select>
                         </div>
                     </div>
+                </nav>
+            </div>
+        </header> <!-- Header -->
+        <section id="home" class="section hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <h5 id="hero1"></h5>
+                    <h1><span class="rotate" id="hero2">Inovação, Design, Performace</span></h1>
+                    <h1><span class="rotate" id="heroEnglish">Innovation, Design, Performance</span></h1>
+                    <p id="descricaoHero">Unindo criatividade e tecnologia para criar experiencias que irão transformar e agregar valor ao seu negócio!</p>
+                    <ul class="social-link">
+                        <li><a href="https://www.linkedin.com/in/gustavo-trindade-9183072ab/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/gugamaz?igsh=MXU4MzAwZjVkMjR6aQ==" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section><!-- service-section -->
-
-    <section id="works" class="portfolio-section bg-dark">
-        <div class="container-fluid">
-            <div class="row portfolio-wrap d-flex align-items-center">
-                <div class="col-md-4 xs-padding">
-                    <div class="section-heading pdl-80">
-                        <h2 class="mb-20">Portifólio</h2>
-                        <p class="mb-20">Explore alguns dos meus projetos mais recentes.</p>
-                        <a href="#contact" class="default-btn">Entre em contato</a>
+            <div class="down-arrow">
+                <a data-scroll href="#about" class="arrow-animated" id="saibaMais">Saiba mais <i class="ti-arrow-down"></i></a>
+            </div>
+        </section><!-- hero-section -->
+        <section id="about" class="about-section bg-dark">
+            <div class="container-fluid">
+                <div class="row about-wrap">
+                    <div class="col-md-6">
+                        <div class="about-content pdl-80">
+                            <div class="section-heading mb-20">
+                                <h2 id="aboutMeTitle">Sobre mim</h2>
+                            </div>
+                            <p id="textMe1">Sou um desenvolvedor de software especializado na criação de produtos digitais únicos, personalizados e atrativos.</p>
+                            <p id="textMe2"> Projeto sites e sistemas que otimizam operações empresariais, transformando conceitos e necessidades em soluções de alto desempenho que se destacam no mercado. </p>
+                            <a href="#" class="default-btn" id="conheca">Conheça meu trabalho</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <img src="img/about/5.png" alt=" image">
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="row portfolio-items">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="portfolio-box">
-                                <div class="portfolio-thumb" id="logo">
-                                    <img src="img/logoClimbe.png" alt="img" width="5px" height="auto">
+            </div>
+        </section><!-- about-section -->
+        <section id="services" class="service-section padding">
+            <div class="container-fluid">
+                <div class="row service-area d-flex align-items-center">
+                    <div class="col-lg-4 col-md-4 xs-padding">
+                        <div class="section-heading pdl-80">
+                            <h2 class="mb-20" id="servicosPage">Serviços</h2>
+                            <p class="mb-20" id="textService">Soluções digitais inovadoras que potencializam o crescimento do seu negócio.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-8 xs-padding">
+                        <div class="row service-wrap">
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="service-content">
+                                    <i class="icon-layers"></i>
+                                    <h3 id="intuitivo">Design Intuitivo</h3>
+                                    <p id="textoIntuitivo">Criação de interfaces amigáveis e funcionais, focadas na melhor experiência do usuário.</p>
                                 </div>
-                                <a href="https://climbe.com.br" target="_blank" class="hover">
-                                    <div>
-                                        <img src="img/zoom.png" alt="icon">
+                            </div><!-- Service-1 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="service-content">
+                                    <i class="bi bi-globe-americas"></i>
+                                    <h3 id="seo">SEO</h3>
+                                    <p id="textoSeo">Estratégias para otimizar seu posicionamento nos motores de busca e atrair o público certo.</p>
+                                </div>
+                            </div><!-- Service-3 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="service-content">
+                                    <i class="bi bi-eye-fill"></i>
+                                    <h3 id="monitoramento">Monitoramento e Atualização</h3>
+                                    <p id="textoMonitoramento">Acompanhamento contínuo para garantir que seu site permaneça sempre disponível e atualizado.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="service-content">
+                                    <i class="icon-bike"></i>
+                                    <h3 id="responsivo">Design Responsivo</h3>
+                                    <p id="textoResponsivo">Layouts que se ajustam perfeitamente a qualquer dispositivo, oferecendo uma navegação fluida.</p>
+                                </div>
+                            </div><!-- Service-5 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="service-content">
+                                    <i class="bi bi-database"></i>
+                                    <h3 id="banco">Gestão de Banco de Dados</h3>
+                                    <p id="textoBanco">Desenvolvimento de soluções de banco de dados seguras, escaláveis e de alto desempenho.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- service-section -->
+        <section id="works" class="portfolio-section bg-dark">
+            <div class="container-fluid">
+                <div class="row portfolio-wrap d-flex align-items-center">
+                    <div class="col-md-4 xs-padding">
+                        <div class="section-heading pdl-80">
+                            <h2 class="mb-20" id="tituloPortifolio">Portifólio</h2>
+                            <p class="mb-20" id="meetPortifolio">Conheça alguns dos meus projetos.</p>
+                            <a href="#contact" class="default-btn" id="entreEmContato">Entre em contato</a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row portfolio-items">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="portfolio-box">
+                                    <div class="portfolio-thumb" id="logo">
+                                        <img src="img/logoClimbe.png" alt="img" width="5px" height="auto">
                                     </div>
-                                </a>
-                            </div>
-                        </div><!-- Portfolio-1 -->
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="portfolio-box">
-                                <div class="portfolio-thumb" id="logo">
-                                    <img src="img/qualicore.svg" alt="img" style="width: 400px;">
+                                    <a href="https://climbe.com.br" target="_blank" class="hover">
+                                        <div>
+                                            <img src="img/zoom.png" alt="icon">
+                                        </div>
+                                    </a>
                                 </div>
-                                <a href="https://gustavomaz11.github.io/QualiCore---RiseUp/QualiCore/html/index.html" target="_blank" class="hover">
-                                    <div>
-                                        <img src="img/zoom.png" alt="icon">
+                            </div><!-- Portfolio-1 -->
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="portfolio-box">
+                                    <div class="portfolio-thumb" id="logo">
+                                        <img src="img/qualicore.svg" alt="img" style="width: 400px;">
                                     </div>
-                                </a>
-                            </div>
-                        </div><!-- Portfolio-2 -->
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="portfolio-box">
-                                <div class="portfolio-thumb " id="logo">
-                                    <h2>R.A. Fotografia</h2>
-                                    <p>Em desenvolvimento</p>
+                                    <a href="https://gustavomaz11.github.io/QualiCore---RiseUp/QualiCore/html/index.html" target="_blank" class="hover">
+                                        <div>
+                                            <img src="img/zoom.png" alt="icon">
+                                        </div>
+                                    </a>
                                 </div>
-                                <a href="#" class="hover rafoto">
-                                    <div>
-                                        <img src="img/zoom.png" alt="icon">
+                            </div><!-- Portfolio-2 -->
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="portfolio-box">
+                                    <div class="portfolio-thumb " id="logo">
+                                        <h2>R.A. Fotografia</h2>
+                                        <p>Em desenvolvimento</p>
                                     </div>
-                                </a>
-                            </div>
-                        </div><!-- Portfolio-3 -->
+                                    <a href="#" class="hover rafoto">
+                                        <div>
+                                            <img src="img/zoom.png" alt="icon">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- Portfolio-3 -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section><!-- portfolio-section -->
-
-    <section class="cta-section padding">
-        <div class="container">
-            <div class="cta-wrap text-center">
-                <div class="cta-content">
-                    <h2>Sou desenvolvedor apaixonado por design e tecnologia, criando soluções inovadoras e impactantes</h2>
-                    <a href="#contact" class="default-btn">Entre em contato</a>
-                </div>
-            </div>
-        </div>
-    </section><!-- cta-section -->
-
-    <section id="contact" class="contact-section bg-dark">
-        <div class="container-fluid">
-            <div class="row contact-wrap">
-                <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 pdl-80">
-                    <div class="contact-info mb-30">
-                        <h2>Vamos começar um projeto juntos<br>me envie uma mensagem</h2>
-                    </div>
-                    <div class="contact-form">
-                        <form action="contact.php" method="post" id="ajax_form" class="form-horizontal">
-                            <div class="form-group colum-row row">
-                                <div class="col-sm-6">
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Nome ou Empresa" required>
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <textarea id="message" name="message" cols="30" rows="5" class="form-control message" placeholder="Mensagem" required></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <button id="submit" class="default-btn submit-button" type="submit">Enviar</button>
-                                </div>
-                            </div>
-                            <div id="form-messages" class="alert" role="alert"></div>
-                        </form>
+        </section><!-- portfolio-section -->
+        <section class="cta-section padding">
+            <div class="container">
+                <div class="cta-wrap text-center">
+                    <div class="cta-content">
+                        <h2 id="broad">Desenvolvedor apaixonado por inivação, que tem o objetivo de criar produtos que impulsionam negócios através da tecnologia.</h2>
+                        <a href="#contact" class="default-btn" id="meEncontre">Entre em contato</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="google-map"></div>
-    </section><!-- contat-section -->
-
-    <footer class="footer-section align-center">
-        <div class="container">
-            <p>&copy; 2025 Gustavo M. Trindade</p>
-        </div>
-    </footer><!-- /.footer_section -->
+        </section><!-- cta-section -->
+        <section id="contact" class="contact-section bg-dark">
+            <div class="container-fluid">
+                <div class="row contact-wrap">
+                    <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 pdl-80">
+                        <div class="contact-info mb-30">
+                            <h2 id="formularioContato">Pronto para iniciar seu projeto?<br>Entre em contato para transformas suas ideias em realidade</h2>
+                        </div>
+                        <div class="contact-form">
+                            <form action="contact.php" method="post" id="ajax_form" class="form-horizontal">
+                                <div class="form-group colum-row row">
+                                    <div class="col-sm-6">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Nome ou Empresa" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <textarea id="message" name="message" cols="30" rows="5" class="form-control message" placeholder="Mensagem"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <button id="submit" class="default-btn submit-button" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                                <div id="form-messages" class="alert" role="alert"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="google-map"></div>
+        </section><!-- contat-section -->
+        <footer class="footer-section align-center">
+            <div class="container">
+                <p>&copy; 2025 Gustavo M. Trindade</p>
+            </div>
+        </footer><!-- /.footer_section -->
+    </div>
 
     <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
 
