@@ -48,221 +48,225 @@
         <div class="spinner"></div>
     </div><!-- Preloader -->
 
-    <div id="app">
-        <header id="header" class="header-section">
-            <div class="container">
-                <nav class="navbar">
-                    <a href="#" class="navbar-brand"><img src="img/gustavo (1).png" alt="Alison" width="155rem" height="auto"></a>
-                    <div class="d-flex menu-wrap">
-                        <div id="navmenu" class="mainmenu">
-                            <ul class="nav">
-                                <li><a data-scroll class="nav-link active" href="#home" id="inicio"><span class="sr-only">(current)</span></a></li>
-                                <li><a data-scroll class="nav-link" href="#about" id="sobre"></a></li>
-                                <li><a data-scroll class="nav-link" href="#services" id="servicos"></a></li>
-                                <li><a data-scroll class="nav-link" href="#works" id="port"></a></li>
-                                <li><a data-scroll class="nav-link" href="#contact" id="contato"></a></li>
-                            </ul>
-                            <select id="toggleLanguage">
-                                <option value="pt" selected>Pt-BR</option>
-                                <option value="eng">English</option>
-                            </select>
-                        </div>
+    
+    <header id="header" class="header-section">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="navbar-brand"><img src="img/gustavo (1).png" alt="Alison" width="155rem" height="auto"></a>
+                <div class="d-flex menu-wrap">
+                    <div id="navmenu" class="mainmenu">
+                        <ul class="nav">
+                            <li><a data-scroll class="nav-link active" href="#home" id="inicio">Inicio<span class="sr-only">(current)</span></a></li>
+                            <li><a data-scroll class="nav-link" href="#about" id="sobre">Sobre</a></li>
+                            <li><a data-scroll class="nav-link" href="#services" id="servicos">Serviços</a></li>
+                            <li><a data-scroll class="nav-link" href="#works" id="port">Portifólio</a></li>
+                            <li><a data-scroll class="nav-link" href="#contact" id="contato">Contato</a></li>
+                            
+                        </ul>
+                        
                     </div>
-                </nav>
+                    
+                </div>
+                <select id="toggleLanguage">
+                    <option value="pt" selected>Pt-BR</option>
+                    <option value="eng">English</option>
+            
+                </select>
+            </nav>
+        </div>
+    </header> <!-- Header -->
+    <section id="home" class="section hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h5 id="hero1"></h5>
+                <h1><span class="rotate" id="hero2">Inovação, Design, Performace</span></h1>
+                <h1><span class="rotate" id="heroEnglish">Innovation, Design, Performance</span></h1>
+                <p id="descricaoHero"></p>
+                <ul class="social-link">
+                    <li><a href="https://www.linkedin.com/in/gustavo-trindade-9183072ab/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/gugamaz?igsh=MXU4MzAwZjVkMjR6aQ==" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                </ul>
             </div>
-        </header> <!-- Header -->
-        <section id="home" class="section hero-section d-flex align-items-center">
-            <div class="container">
-                <div class="hero-content text-center">
-                    <h5 id="hero1"></h5>
-                    <h1><span class="rotate" id="hero2">Inovação, Design, Performace</span></h1>
-                    <h1><span class="rotate" id="heroEnglish">Innovation, Design, Performance</span></h1>
-                    <p id="descricaoHero"></p>
-                    <ul class="social-link">
-                        <li><a href="https://www.linkedin.com/in/gustavo-trindade-9183072ab/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://www.instagram.com/gugamaz?igsh=MXU4MzAwZjVkMjR6aQ==" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
+        </div>
+        <div class="down-arrow">
+            <a data-scroll href="#about" class="arrow-animated" id="saibaMais"> <i class="ti-arrow-down"></i></a>
+        </div>
+    </section><!-- hero-section -->
+    <section id="about" class="about-section bg-dark">
+        <div class="container-fluid">
+            <div class="row about-wrap">
+                <div class="col-md-6">
+                    <div class="about-content pdl-80">
+                        <div class="section-heading mb-20">
+                            <h2 id="aboutMeTitle"></h2>
+                        </div>
+                        <p id="textMe1"></p>
+                        <p id="textMe2"></p>
+                        <a href="#works" class="default-btn" id="conheca"></a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="img/about/5.png" alt=" image">
                 </div>
             </div>
-            <div class="down-arrow">
-                <a data-scroll href="#about" class="arrow-animated" id="saibaMais"> <i class="ti-arrow-down"></i></a>
-            </div>
-        </section><!-- hero-section -->
-        <section id="about" class="about-section bg-dark">
-            <div class="container-fluid">
-                <div class="row about-wrap">
-                    <div class="col-md-6">
-                        <div class="about-content pdl-80">
-                            <div class="section-heading mb-20">
-                                <h2 id="aboutMeTitle"></h2>
-                            </div>
-                            <p id="textMe1"></p>
-                            <p id="textMe2"></p>
-                            <a href="#works" class="default-btn" id="conheca"></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 d-none d-md-block">
-                        <img src="img/about/5.png" alt=" image">
+        </div>
+    </section>
+    <section id="services" class="service-section padding">
+        <div class="container-fluid">
+            <div class="row service-area d-flex align-items-center">
+                <div class="col-lg-4 col-md-4 xs-padding">
+                    <div class="section-heading pdl-80">
+                        <h2 class="mb-20" id="servicosPage"></h2>
+                        <p class="mb-20" id="textService"></p>
                     </div>
                 </div>
-            </div>
-        </section><!-- about-section -->
-        <section id="services" class="service-section padding">
-            <div class="container-fluid">
-                <div class="row service-area d-flex align-items-center">
-                    <div class="col-lg-4 col-md-4 xs-padding">
-                        <div class="section-heading pdl-80">
-                            <h2 class="mb-20" id="servicosPage"></h2>
-                            <p class="mb-20" id="textService"></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-8 xs-padding">
-                        <div class="row service-wrap">
-                            <div class="col-lg-4 col-sm-6 pd-15">
-                                <div class="service-content">
-                                    <i class="icon-layers"></i>
-                                    <h3 id="intuitivo"></h3>
-                                    <p id="textoIntuitivo"></p>
-                                </div>
-                            </div><!-- Service-1 -->
-                            <div class="col-lg-4 col-sm-6 pd-15">
-                                <div class="service-content">
-                                    <i class="bi bi-globe-americas"></i>
-                                    <h3 id="seo"></h3>
-                                    <p id="textoSeo"></p>
-                                </div>
-                            </div><!-- Service-3 -->
-                            <div class="col-lg-4 col-sm-6 pd-15">
-                                <div class="service-content">
-                                    <i class="bi bi-eye-fill"></i>
-                                    <h3 id="monitoramento"></h3>
-                                    <p id="textoMonitoramento"></p>
-                                </div>
+                <div class="col-lg-7 col-md-8 xs-padding">
+                    <div class="row service-wrap">
+                        <div class="col-lg-4 col-sm-6 pd-15">
+                            <div class="service-content">
+                                <i class="icon-layers"></i>
+                                <h3 id="intuitivo"></h3>
+                                <p id="textoIntuitivo"></p>
                             </div>
-                            <div class="col-lg-4 col-sm-6 pd-15">
-                                <div class="service-content">
-                                    <i class="icon-bike"></i>
-                                    <h3 id="responsivo"></h3>
-                                    <p id="textoResponsivo"></p>
-                                </div>
-                            </div><!-- Service-5 -->
-                            <div class="col-lg-4 col-sm-6 pd-15">
-                                <div class="service-content">
-                                    <i class="bi bi-database"></i>
-                                    <h3 id="banco"></h3>
-                                    <p id="textoBanco"></p>
-                                </div>
+                        </div><!-- Service-1 -->
+                        <div class="col-lg-4 col-sm-6 pd-15">
+                            <div class="service-content">
+                                <i class="bi bi-globe-americas"></i>
+                                <h3 id="seo"></h3>
+                                <p id="textoSeo"></p>
+                            </div>
+                        </div><!-- Service-3 -->
+                        <div class="col-lg-4 col-sm-6 pd-15">
+                            <div class="service-content">
+                                <i class="bi bi-eye-fill"></i>
+                                <h3 id="monitoramento"></h3>
+                                <p id="textoMonitoramento"></p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- service-section -->
-        <section id="works" class="portfolio-section bg-dark">
-            <div class="container-fluid">
-                <div class="row portfolio-wrap d-flex align-items-center">
-                    <div class="col-md-4 xs-padding">
-                        <div class="section-heading pdl-80">
-                            <h2 class="mb-20" id="tituloPortifolio"></h2>
-                            <p class="mb-20" id="meetPortifolio"></p>
-                            <a href="#contact" class="default-btn" id="entreEmContato"></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row portfolio-items">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="portfolio-box">
-                                    <div class="portfolio-thumb" id="logo">
-                                        <img src="img/logoClimbe.png" alt="img" width="5px" height="auto">
-                                    </div>
-                                    <a href="https://climbe.com.br" target="_blank" class="hover">
-                                        <div>
-                                            <img src="img/zoom.png" alt="icon">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div><!-- Portfolio-1 -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="portfolio-box">
-                                    <div class="portfolio-thumb" id="logo">
-                                        <img src="img/qualicore.svg" alt="img" style="width: 400px;">
-                                    </div>
-                                    <a href="https://gustavomaz11.github.io/QualiCore---RiseUp/QualiCore/html/index.html" target="_blank" class="hover">
-                                        <div>
-                                            <img src="img/zoom.png" alt="icon">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div><!-- Portfolio-2 -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="portfolio-box">
-                                    <div class="portfolio-thumb " id="logo">
-                                        <h2>R.A. Fotografia</h2>
-                                        <p>Em desenvolvimento</p>
-                                    </div>
-                                    <a href="#" class="hover rafoto">
-                                        <div>
-                                            <img src="img/zoom.png" alt="icon">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div><!-- Portfolio-3 -->
+                        <div class="col-lg-4 col-sm-6 pd-15">
+                            <div class="service-content">
+                                <i class="icon-bike"></i>
+                                <h3 id="responsivo"></h3>
+                                <p id="textoResponsivo"></p>
+                            </div>
+                        </div><!-- Service-5 -->
+                        <div class="col-lg-4 col-sm-6 pd-15">
+                            <div class="service-content">
+                                <i class="bi bi-database"></i>
+                                <h3 id="banco"></h3>
+                                <p id="textoBanco"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section><!-- portfolio-section -->
-        <section class="cta-section padding">
-            <div class="container">
-                <div class="cta-wrap text-center">
-                    <div class="cta-content">
-                        <h2 id="broad"></h2>
-                        <a href="#contact" class="default-btn" id="meEncontre"></a>
+        </div>
+    </section><!-- service-section -->
+    <section id="works" class="portfolio-section bg-dark">
+        <div class="container-fluid">
+            <div class="row portfolio-wrap d-flex align-items-center">
+                <div class="col-md-4 xs-padding">
+                    <div class="section-heading pdl-80">
+                        <h2 class="mb-20" id="tituloPortifolio"></h2>
+                        <p class="mb-20" id="meetPortifolio"></p>
+                        <a href="#contact" class="default-btn" id="entreEmContato"></a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row portfolio-items">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="portfolio-box">
+                                <div class="portfolio-thumb" id="logo">
+                                    <img src="img/logoClimbe.png" alt="img" width="5px" height="auto">
+                                </div>
+                                <a href="https://climbe.com.br" target="_blank" class="hover">
+                                    <div>
+                                        <img src="img/zoom.png" alt="icon">
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- Portfolio-1 -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="portfolio-box">
+                                <div class="portfolio-thumb" id="logo">
+                                    <img src="img/qualicore.svg" alt="img" style="width: 400px;">
+                                </div>
+                                <a href="https://gustavomaz11.github.io/QualiCore---RiseUp/QualiCore/html/index.html" target="_blank" class="hover">
+                                    <div>
+                                        <img src="img/zoom.png" alt="icon">
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- Portfolio-2 -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="portfolio-box">
+                                <div class="portfolio-thumb " id="logo">
+                                    <h2>R.A. Fotografia</h2>
+                                    <p>Em desenvolvimento</p>
+                                </div>
+                                <a href="#" class="hover rafoto">
+                                    <div>
+                                        <img src="img/zoom.png" alt="icon">
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- Portfolio-3 -->
                     </div>
                 </div>
             </div>
-        </section><!-- cta-section -->
-        <section id="contact" class="contact-section bg-dark">
-            <div class="container-fluid">
-                <div class="row contact-wrap">
-                    <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 pdl-80">
-                        <div class="contact-info mb-30">
-                            <h2 id="formularioContato"></h2>
-                        </div>
-                        <div class="contact-form">
-                            <form action="contact.php" method="post" id="ajax_form" class="form-horizontal">
-                                <div class="form-group colum-row row">
-                                    <div class="col-sm-6">
-                                        <input type="text" id="name" name="name" class="form-control" placeholder="Nome ou Empresa" required>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
-                                    </div>
+        </div>
+    </section><!-- portfolio-section -->
+    <section class="cta-section padding">
+        <div class="container">
+            <div class="cta-wrap text-center">
+                <div class="cta-content">
+                    <h2 id="broad"></h2>
+                    <a href="#contact" class="default-btn" id="meEncontre"></a>
+                </div>
+            </div>
+        </div>
+    </section><!-- cta-section -->
+    <section id="contact" class="contact-section bg-dark">
+        <div class="container-fluid">
+            <div class="row contact-wrap">
+                <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 pdl-80">
+                    <div class="contact-info mb-30">
+                        <h2 id="formularioContato"></h2>
+                    </div>
+                    <div class="contact-form">
+                        <form action="contact.php" method="post" id="ajax_form" class="form-horizontal">
+                            <div class="form-group colum-row row">
+                                <div class="col-sm-6">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Nome ou Empresa" required>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <textarea id="message" name="message" cols="30" rows="5" class="form-control message" placeholder="Mensagem"></textarea>
-                                    </div>
+                                <div class="col-sm-6">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <button id="submit" class="default-btn submit-button" type="submit">Enviar</button>
-                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <textarea id="message" name="message" cols="30" rows="5" class="form-control message" placeholder="Mensagem"></textarea>
                                 </div>
-                                <div id="form-messages" class="alert" role="alert"></div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <button id="submit" class="default-btn submit-button" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                            <div id="form-messages" class="alert" role="alert"></div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div id="google-map"></div>
-        </section><!-- contat-section -->
-        <footer class="footer-section align-center">
-            <div class="container">
-                <p>&copy; 2025 Gustavo M. Trindade</p>
-            </div>
-        </footer><!-- /.footer_section -->
-    </div>
+        </div>
+        <div id="google-map"></div>
+    </section><!-- contat-section -->
+    <footer class="footer-section align-center">
+        <div class="container">
+            <p>&copy; 2025 Gustavo M. Trindade</p>
+        </div>
+    </footer><!-- /.footer_section -->
+    
 
     <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
 

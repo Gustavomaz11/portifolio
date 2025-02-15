@@ -959,3 +959,22 @@ ul.nav > li > a.active {
 #navmenu select option {
   color: #050505;
 }
+
+@media(max-width: 780px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between !important;
+  }
+
+  #navmenu ul li a {
+    color: #050505 !important;
+    
+  }
+  
+    
+  .menu-wrap {
+    
+    width: 50%;
+    
+  }
+}
