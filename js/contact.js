@@ -1,49 +1,50 @@
-$(function() {
-    // Get the form.
-    var form = $('#ajax_form');
+document.addEventListener('DOMContentLoaded', function() {
+	// Get the form and the messages div.
+	var form = document.getElementById('ajax_form');
+	var formMessages = document.getElementById('form-messages');
 
-    // Get the messages div.
-    var formMessages = $('#form-messages');
+	// Set up an event listener for the contact form.
+	form.addEventListener('submit', function(event) {
+			// Stop the browser from submitting the form.
+			event.preventDefault();
 
-    // Set up an event listener for the contact form.
-	$(form).submit(function(event) {
-		// Stop the browser from submitting the form.
-		event.preventDefault();
+			// Create a FormData object from the form.
+			var formData = new FormData(form);
 
-		// Serialize the form data.
-		var formData = $(form).serialize();
-		// Submit the form using AJAX.
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		})
-		.done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-			$(formMessages).removeClass('alert-danger');
-			$(formMessages).addClass('alert-success');
+			// Create the AJAX request.
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', form.action, true);
 
-			// Set the message text.
-			$(formMessages).text(response);
+			xhr.onload = function() {
+					if (xhr.status === 200) {
+							// Success: Set the formMessages div to success style and message.
+							formMessages.classList.remove('alert-danger');
+							formMessages.classList.add('alert-success');
+							formMessages.textContent = xhr.responseText;
 
-			// Clear the form.
-			$('#name').val('');
-			$('#email').val('');
-			$('#message').val('');
-		})
-		.fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('alert-success');
-			$(formMessages).addClass('alert-danger');
+							// Clear the form fields.
+							form.reset();
+					} else {
+							// Failure: Set the formMessages div to error style and message.
+							formMessages.classList.remove('alert-success');
+							formMessages.classList.add('alert-danger');
 
-			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! Ocorreu um erro ao enviar a mensagem.');
-			}
-		});
-		
+							if (xhr.responseText !== '') {
+									formMessages.textContent = xhr.responseText;
+							} else {
+									formMessages.textContent = 'Oops! Ocorreu um erro ao enviar a mensagem.';
+							}
+					}
+			};
+
+			xhr.onerror = function() {
+					// Handle network error
+					formMessages.classList.remove('alert-success');
+					formMessages.classList.add('alert-danger');
+					formMessages.textContent = 'Oops! Ocorreu um erro ao enviar a mensagem.';
+			};
+
+			// Send the form data.
+			xhr.send(formData);
 	});
-	
 });
